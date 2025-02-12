@@ -23,10 +23,14 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 
 # Drivers
 # дальномер
-# apt install ros-noetic-lsc-ros-driver    
+# sudo apt install ros-noetic-lsc-ros-driver    
 # roslaunch lsc_ros_driver lsc_c25_launch.launch
 
 # камера
 # apt-get install ros-noetic-libuvc-camera 
 # chmod o+w /dev/bus/usb/001/002 
-# roslaunch honor_cam elp.launch 
+
+
+
+# запуск ноды робота
+# roslaunch wrh_robot wrh.launch

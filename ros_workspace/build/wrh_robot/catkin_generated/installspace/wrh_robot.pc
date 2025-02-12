@@ -1,0 +1,8 @@
+prefix=/home/vancho/Linux4RoboticistFinal/ros_workspace/install
+
+Name: wrh_robot
+Description: Description of wrh_robot
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

@@ -1,2 +1,2 @@
-
+lsc_ros_driver:wrh_robot
 -DCATKIN_DEVEL_PREFIX=/home/vancho/Linux4RoboticistFinal/ros_workspace/devel -DCMAKE_INSTALL_PREFIX=/home/vancho/Linux4RoboticistFinal/ros_workspace/install -G Unix Makefiles
