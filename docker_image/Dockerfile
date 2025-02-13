@@ -8,7 +8,7 @@ ENV DEBIAN_FRONTEND=noninteractive
 
 
 # install bootstrap tools
-RUN apt-get update && apt-get install --no-install-recommends -y \
+ RUN apt-get update && apt-get install --no-install-recommends -y \
     build-essential \
     python3-rosdep \
     python3-rosinstall \
@@ -26,10 +26,13 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 
 # копируем ROS Workspace с пакетами
 #RUN mkdir -p /home/${USER}/ros_workspace
-COPY /home/vancho/Linux4RoboticistFinal/ros_workspace/ /home/${USER}/ros_workspace
+COPY ros_workspace/ /home/ros_workspace
+# COPY folder1 /home
+
 
 # SSH и nano
- #   apt update && apt install openssh-server && apt install nano
+ RUN apt-get update && apt-get install -y openssh-server 
+ RUN apt-get install -y nano
  # или https://vmblog.ru/ssh-vhod-v-docker-kontejner/
 #
 #RUN apt update && apt install openssh-server sudo -y
@@ -56,12 +59,18 @@ RUN apt-get update && apt-get install -y ros-noetic-lsc-ros-driver
 # chmod o+w /dev/bus/usb/001/002 
 RUN apt-get update && apt-get install -y ros-noetic-libuvc-camera 
 
+RUN /bin/bash -c 'source /opt/ros/noetic/setup.bash;\
+    echo "source /home/ros_workspace/devel/setup.bash" >> ~/.bashrc'
+
+    #cd /MY_PROJECT;\
+   # catkin_make -j8;\
+
 
 # Копируем в образ нашу программу
 COPY init.sh /init.sh
 
 # Запускаем программу при старте контейнера
-CMD ["./init.sh"]
+#CMD ["./init.sh"]
 
-# запуск ноды робота
-# roslaunch wrh_robot wrh.launch
+CMD ["./bin/bash"]
+
