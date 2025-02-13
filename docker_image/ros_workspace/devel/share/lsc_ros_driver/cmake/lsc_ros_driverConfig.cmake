@@ -67,14 +67,14 @@ set(lsc_ros_driver_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("TRUE" STREQUAL "TRUE")
-  set(lsc_ros_driver_SOURCE_PREFIX /home/vancho/Linux4RoboticistFinal/ros_workspace/src/lsc_ros_driver)
-  set(lsc_ros_driver_DEVEL_PREFIX /home/vancho/Linux4RoboticistFinal/ros_workspace/devel)
+  set(lsc_ros_driver_SOURCE_PREFIX /home/vancho/Linux4RoboticistFinal/docker_image/ros_workspace/src/lsc_ros_driver)
+  set(lsc_ros_driver_DEVEL_PREFIX /home/vancho/Linux4RoboticistFinal/docker_image/ros_workspace/devel)
   set(lsc_ros_driver_INSTALL_PREFIX "")
   set(lsc_ros_driver_PREFIX ${lsc_ros_driver_DEVEL_PREFIX})
 else()
   set(lsc_ros_driver_SOURCE_PREFIX "")
   set(lsc_ros_driver_DEVEL_PREFIX "")
-  set(lsc_ros_driver_INSTALL_PREFIX /home/vancho/Linux4RoboticistFinal/ros_workspace/install)
+  set(lsc_ros_driver_INSTALL_PREFIX /home/vancho/Linux4RoboticistFinal/docker_image/ros_workspace/install)
   set(lsc_ros_driver_PREFIX ${lsc_ros_driver_INSTALL_PREFIX})
 endif()
 
@@ -91,9 +91,9 @@ endif()
 # flag project as catkin-based to distinguish if a find_package()-ed project is a catkin project
 set(lsc_ros_driver_FOUND_CATKIN_PROJECT TRUE)
 
-if(NOT "/home/vancho/Linux4RoboticistFinal/ros_workspace/src/lsc_ros_driver/include " STREQUAL " ")
+if(NOT "/home/vancho/Linux4RoboticistFinal/docker_image/ros_workspace/src/lsc_ros_driver/include " STREQUAL " ")
   set(lsc_ros_driver_INCLUDE_DIRS "")
-  set(_include_dirs "/home/vancho/Linux4RoboticistFinal/ros_workspace/src/lsc_ros_driver/include")
+  set(_include_dirs "/home/vancho/Linux4RoboticistFinal/docker_image/ros_workspace/src/lsc_ros_driver/include")
   if(NOT " " STREQUAL " ")
     set(_report "Check the issue tracker '' and consider creating a ticket if the problem has not been reported yet.")
   elseif(NOT "https://wiki.ros.org/lsc_ros_driver " STREQUAL " ")
@@ -110,7 +110,7 @@ if(NOT "/home/vancho/Linux4RoboticistFinal/ros_workspace/src/lsc_ros_driver/incl
         message(FATAL_ERROR "Project 'lsc_ros_driver' specifies '${idir}' as an include dir, which is not found.  It does not exist in '${include}'.  ${_report}")
       endif()
     else()
-      message(FATAL_ERROR "Project 'lsc_ros_driver' specifies '${idir}' as an include dir, which is not found.  It does neither exist as an absolute directory nor in '/home/vancho/Linux4RoboticistFinal/ros_workspace/src/lsc_ros_driver/${idir}'.  ${_report}")
+      message(FATAL_ERROR "Project 'lsc_ros_driver' specifies '${idir}' as an include dir, which is not found.  It does neither exist as an absolute directory nor in '/home/vancho/Linux4RoboticistFinal/docker_image/ros_workspace/src/lsc_ros_driver/${idir}'.  ${_report}")
     endif()
     _list_append_unique(lsc_ros_driver_INCLUDE_DIRS ${include})
   endforeach()
@@ -154,7 +154,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /home/vancho/Linux4RoboticistFinal/ros_workspace/devel/lib;/home/vancho/Linux4RoboticistFinal/ros_workspace/devel/lib;/home/vancho/catkin_ws/devel/lib;/opt/ros/noetic/lib)
+    foreach(path /home/vancho/Linux4RoboticistFinal/docker_image/ros_workspace/devel/lib;/home/vancho/Linux4RoboticistFinal/docker_image/ros_workspace/devel/lib;/opt/ros/noetic/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)

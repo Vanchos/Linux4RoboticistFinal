@@ -1,8 +1,8 @@
-prefix=/home/vancho/Linux4RoboticistFinal/ros_workspace/devel
+prefix=/home/vancho/Linux4RoboticistFinal/docker_image/ros_workspace/devel
 
 Name: lsc_ros_driver
 Description: Description of lsc_ros_driver
 Version: 1.0.4
-Cflags: -I/home/vancho/Linux4RoboticistFinal/ros_workspace/src/lsc_ros_driver/include
+Cflags: -I/home/vancho/Linux4RoboticistFinal/docker_image/ros_workspace/src/lsc_ros_driver/include
 Libs: -L${prefix}/lib 
 Requires: roscpp sensor_msgs std_msgs

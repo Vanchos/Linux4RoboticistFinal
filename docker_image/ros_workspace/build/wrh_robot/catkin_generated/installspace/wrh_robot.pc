@@ -1,4 +1,4 @@
-prefix=/home/vancho/Linux4RoboticistFinal/ros_workspace/install
+prefix=/home/vancho/Linux4RoboticistFinal/docker_image/ros_workspace/install
 
 Name: wrh_robot
 Description: Description of wrh_robot

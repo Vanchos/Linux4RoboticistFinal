@@ -26,7 +26,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 
 # копируем ROS Workspace с пакетами
 #RUN mkdir -p /home/${USER}/ros_workspace
-COPY ros_workspace/ /home/ros_workspace
+COPY ros_workspace/ /home/vancho/Linux4RoboticistFinal/docker_image/ros_workspace
 # COPY folder1 /home
 
 
@@ -60,7 +60,7 @@ RUN apt-get update && apt-get install -y ros-noetic-lsc-ros-driver
 RUN apt-get update && apt-get install -y ros-noetic-libuvc-camera 
 
 RUN /bin/bash -c 'source /opt/ros/noetic/setup.bash;\
-    echo "source /home/ros_workspace/devel/setup.bash" >> ~/.bashrc'
+    echo "source /home/vancho/Linux4RoboticistFinal/docker_image/ros_workspace/devel/setup.bash" >> ~/.bashrc'
 
     #cd /MY_PROJECT;\
    # catkin_make -j8;\

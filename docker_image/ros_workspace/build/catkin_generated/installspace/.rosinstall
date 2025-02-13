@@ -1,2 +1,2 @@
 - setup-file:
-    local-name: /home/vancho/Linux4RoboticistFinal/ros_workspace/install/setup.sh
+    local-name: /home/vancho/Linux4RoboticistFinal/docker_image/ros_workspace/install/setup.sh

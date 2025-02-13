@@ -6,11 +6,11 @@
 
 #IncludeRegexTransform: 
 
-/home/vancho/Linux4RoboticistFinal/ros_workspace/src/lsc_ros_driver/include/laser.h
+/home/vancho/Linux4RoboticistFinal/docker_image/ros_workspace/src/lsc_ros_driver/include/laser.h
 ros/ros.h
 -
 std_msgs/String.h
-/home/vancho/Linux4RoboticistFinal/ros_workspace/src/lsc_ros_driver/include/std_msgs/String.h
+/home/vancho/Linux4RoboticistFinal/docker_image/ros_workspace/src/lsc_ros_driver/include/std_msgs/String.h
 sensor_msgs/LaserScan.h
 -
 diagnostic_updater/diagnostic_updater.h
@@ -18,11 +18,11 @@ diagnostic_updater/diagnostic_updater.h
 diagnostic_updater/publisher.h
 -
 socket.hpp
-/home/vancho/Linux4RoboticistFinal/ros_workspace/src/lsc_ros_driver/include/socket.hpp
+/home/vancho/Linux4RoboticistFinal/docker_image/ros_workspace/src/lsc_ros_driver/include/socket.hpp
 parser.hpp
-/home/vancho/Linux4RoboticistFinal/ros_workspace/src/lsc_ros_driver/include/parser.hpp
+/home/vancho/Linux4RoboticistFinal/docker_image/ros_workspace/src/lsc_ros_driver/include/parser.hpp
 
-/home/vancho/Linux4RoboticistFinal/ros_workspace/src/lsc_ros_driver/include/parser.hpp
+/home/vancho/Linux4RoboticistFinal/docker_image/ros_workspace/src/lsc_ros_driver/include/parser.hpp
 sensor_msgs/LaserScan.h
 -
 vector
@@ -38,7 +38,7 @@ memory
 array
 -
 
-/home/vancho/Linux4RoboticistFinal/ros_workspace/src/lsc_ros_driver/include/socket.hpp
+/home/vancho/Linux4RoboticistFinal/docker_image/ros_workspace/src/lsc_ros_driver/include/socket.hpp
 pthread.h
 -
 vector
@@ -66,7 +66,7 @@ stdlib.h
 errno.h
 -
 
-/home/vancho/Linux4RoboticistFinal/ros_workspace/src/lsc_ros_driver/src/laser.cpp
+/home/vancho/Linux4RoboticistFinal/docker_image/ros_workspace/src/lsc_ros_driver/src/laser.cpp
 iostream
 -
 sstream
@@ -74,31 +74,31 @@ sstream
 self_test/self_test.h
 -
 laser.h
-/home/vancho/Linux4RoboticistFinal/ros_workspace/src/lsc_ros_driver/src/laser.h
+/home/vancho/Linux4RoboticistFinal/docker_image/ros_workspace/src/lsc_ros_driver/src/laser.h
 sys/ioctl.h
 -
 net/if.h
 -
 
-/home/vancho/Linux4RoboticistFinal/ros_workspace/src/lsc_ros_driver/src/lsc_laser_publisher.cpp
+/home/vancho/Linux4RoboticistFinal/docker_image/ros_workspace/src/lsc_ros_driver/src/lsc_laser_publisher.cpp
 laser.h
-/home/vancho/Linux4RoboticistFinal/ros_workspace/src/lsc_ros_driver/src/laser.h
+/home/vancho/Linux4RoboticistFinal/docker_image/ros_workspace/src/lsc_ros_driver/src/laser.h
 
-/home/vancho/Linux4RoboticistFinal/ros_workspace/src/lsc_ros_driver/src/parser.cpp
+/home/vancho/Linux4RoboticistFinal/docker_image/ros_workspace/src/lsc_ros_driver/src/parser.cpp
 parser.hpp
-/home/vancho/Linux4RoboticistFinal/ros_workspace/src/lsc_ros_driver/src/parser.hpp
+/home/vancho/Linux4RoboticistFinal/docker_image/ros_workspace/src/lsc_ros_driver/src/parser.hpp
 chrono
 -
 netinet/in.h
 -
 
-/home/vancho/Linux4RoboticistFinal/ros_workspace/src/lsc_ros_driver/src/socket.cpp
+/home/vancho/Linux4RoboticistFinal/docker_image/ros_workspace/src/lsc_ros_driver/src/socket.cpp
 sys/poll.h
 -
 stdio.h
 -
 socket.hpp
-/home/vancho/Linux4RoboticistFinal/ros_workspace/src/lsc_ros_driver/src/socket.hpp
+/home/vancho/Linux4RoboticistFinal/docker_image/ros_workspace/src/lsc_ros_driver/src/socket.hpp
 chrono
 -
 

@@ -7,4 +7,4 @@
 # new environment variables
 
 # modified environment variables
-export PWD='/home/vancho/Linux4RoboticistFinal/ros_workspace/build'
+export PWD='/home/vancho/Linux4RoboticistFinal/docker_image/ros_workspace/build'

@@ -1,8 +1,8 @@
-# Install script for directory: /home/vancho/Linux4RoboticistFinal/ros_workspace/src/lsc_ros_driver
+# Install script for directory: /home/vancho/Linux4RoboticistFinal/docker_image/ros_workspace/src/lsc_ros_driver
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/vancho/Linux4RoboticistFinal/ros_workspace/install")
+  set(CMAKE_INSTALL_PREFIX "/home/vancho/Linux4RoboticistFinal/docker_image/ros_workspace/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -38,17 +38,17 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/vancho/Linux4RoboticistFinal/ros_workspace/build/lsc_ros_driver/catkin_generated/installspace/lsc_ros_driver.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/vancho/Linux4RoboticistFinal/docker_image/ros_workspace/build/lsc_ros_driver/catkin_generated/installspace/lsc_ros_driver.pc")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/lsc_ros_driver/cmake" TYPE FILE FILES
-    "/home/vancho/Linux4RoboticistFinal/ros_workspace/build/lsc_ros_driver/catkin_generated/installspace/lsc_ros_driverConfig.cmake"
-    "/home/vancho/Linux4RoboticistFinal/ros_workspace/build/lsc_ros_driver/catkin_generated/installspace/lsc_ros_driverConfig-version.cmake"
+    "/home/vancho/Linux4RoboticistFinal/docker_image/ros_workspace/build/lsc_ros_driver/catkin_generated/installspace/lsc_ros_driverConfig.cmake"
+    "/home/vancho/Linux4RoboticistFinal/docker_image/ros_workspace/build/lsc_ros_driver/catkin_generated/installspace/lsc_ros_driverConfig-version.cmake"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/lsc_ros_driver" TYPE FILE FILES "/home/vancho/Linux4RoboticistFinal/ros_workspace/src/lsc_ros_driver/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/lsc_ros_driver" TYPE FILE FILES "/home/vancho/Linux4RoboticistFinal/docker_image/ros_workspace/src/lsc_ros_driver/package.xml")
 endif()
 
