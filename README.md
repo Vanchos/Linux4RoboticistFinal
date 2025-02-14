@@ -22,20 +22,21 @@
 
 ### Архитектура программной части комплекса
 
-**Узлы (Nodes)**
+#### Узлы (Nodes)
 - Драйвер лазерного дальномера (LSC-C Series - ros-noetic-lsc-ros-driver https://wiki.ros.org/lsc_ros_driver | https://github.com/AutonicsLiDAR/lsc_ros_driver/tree/master) - **node name="lsc_laser_publisher"**
 - Драйвер камеры (USB Video Class camera driver - ros-noetic-libuvc-cam https://wiki.ros.org/libuvc_camera) **node name="mycam"**
 - Драйвер привода тормоза (гипотетический)
 - Модуль управления (например, Raspberry Pi 4 Model B 2Gb)
 
-**Топики (Topics)**
+#### Топики (Topics)
 - Данные дальномера
 - Данные камеры
 
-**Сервисы (Services)**
+#### Сервисы (Services)
 - Запуск торможения
 
->Программная асть реализованга в виде ROS-пакета "wrh_robot" [package.xml](docker_image/ros_workspace/src/wrh_robot/package.xml)  
+**Резюме**  
+>Программная часть реализована в виде ROS-пакета "wrh_robot" [package.xml](docker_image/ros_workspace/src/wrh_robot/package.xml)  
 >Запуск пакета осуществляется с помощью launch-файла [wrh.launch](docker_image/ros_workspace/src/wrh_robot/launch/wrh.launch)
 
 ### Работа ROS-пакета
