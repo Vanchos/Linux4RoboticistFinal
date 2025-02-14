@@ -42,8 +42,8 @@ COPY ros_workspace/ /home/vancho/Linux4RoboticistFinal/docker_image/ros_workspac
 #EXPOSE 22
 #CMD ["/usr/sbin/sshd","-D"]
 
-
-
+# RQT
+RUN apt-get install -y ros-noetic-rqt ros-noetic-rqt-common-plugins
 
 
 # Drivers
@@ -60,6 +60,7 @@ RUN apt-get update && apt-get install -y ros-noetic-lsc-ros-driver
 RUN apt-get update && apt-get install -y ros-noetic-libuvc-camera 
 
 RUN /bin/bash -c 'source /opt/ros/noetic/setup.bash;\
+    echo "source /opt/ros/noetic/setup.bash" >> ~/.bashrc;\
     echo "source /home/vancho/Linux4RoboticistFinal/docker_image/ros_workspace/devel/setup.bash" >> ~/.bashrc'
 
     #cd /MY_PROJECT;\

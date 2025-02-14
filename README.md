@@ -23,7 +23,7 @@
 ### Архитектура программной части комплекса
 
 **Узлы (Nodes)**
-- Драйвер лазерного дальномера (LSC-C Series - ros-noetic-lsc-ros-driver https://wiki.ros.org/lsc_ros_driver)
+- Драйвер лазерного дальномера (LSC-C Series - ros-noetic-lsc-ros-driver https://wiki.ros.org/lsc_ros_driver | https://github.com/AutonicsLiDAR/lsc_ros_driver/tree/master)
 - Драйвер камеры (USB Video Class camera driver - ros-noetic-libuvc-cam https://wiki.ros.org/libuvc_camera) 
 - Драйвер привода тормоза (ипотетический)
 - Модуль управления
@@ -36,3 +36,8 @@
 - Запуск торможения
 
 ## Инструкция по установке
+
+docker run -it --device=/dev/bus/usb/001/002 docker-wrh
+chmod o+w /dev/bus/usb/001/002 
+roslaunch wrh_robot wrh.launch
+
