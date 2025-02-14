@@ -35,7 +35,7 @@
 #### Сервисы (Services)
 - Запуск торможения
 
-**Резюме**  
+#### Резюме
 >Программная часть реализована в виде ROS-пакета "wrh_robot" [package.xml](docker_image/ros_workspace/src/wrh_robot/package.xml)  
 >Запуск пакета осуществляется с помощью launch-файла [wrh.launch](docker_image/ros_workspace/src/wrh_robot/launch/wrh.launch)
 
