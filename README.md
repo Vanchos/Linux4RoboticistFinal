@@ -37,7 +37,14 @@
 
 ## Инструкция по установке
 
-docker run -it --device=/dev/bus/usb/001/002 docker-wrh
-chmod o+w /dev/bus/usb/001/002 
-roslaunch wrh_robot wrh.launch
+### Docker
+
+1. Создайте папку "vancho" в каталоге "Home" и перейдите в нее.
+2. Клонируйте сюда проект с GitHub: https://github.com/Vanchos/Linux4RoboticistFinal
+3. Перейдите в пвпку /home/vancho/Linux4RoboticistFinal/docker_image
+4. Постройте Docker: `$ docker build -t docker-wrh .`
+5. Запустите docker, с пробросом в него камеры с ноутбука: `docker run -it --device=/dev/bus/usb/001/002 docker-wrh`
+6. В терминале запущенного docker запустите скрипт init.sh или последовательно выполните команды:
+    - `chmod o+w /dev/bus/usb/001/002`
+    - `roslaunch wrh_robot wrh.launch`
 
