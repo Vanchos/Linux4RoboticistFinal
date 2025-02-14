@@ -45,9 +45,9 @@
 
 1. Создайте папку "vancho" в каталоге "Home" и перейдите в нее.
 2. Клонируйте сюда проект с GitHub: https://github.com/Vanchos/Linux4RoboticistFinal
-3. Перейдите в пвпку /home/vancho/Linux4RoboticistFinal/docker_image
+3. Перейдите в папку /home/vancho/Linux4RoboticistFinal/docker_image
 4. Постройте Docker: `$ docker build -t docker-wrh .`
-5. Запустите docker, с пробросом в него камеры с ноутбука: `docker run -it --device=/dev/bus/usb/001/002 -p 50022:22 docker-wrh`
+5. Запустите docker, с пробросом в него камеры с ноутбука и порта для ssh: `docker run -it --device=/dev/bus/usb/001/002 -p 50022:22 docker-wrh`
 6. В терминале запущенного docker (`docker exec -it "CONTAINER ID" /bin/bash`) запустите скрипт init.sh или последовательно выполните команды:
     - `/usr/sbin/sshd -D`
     - `chmod o+w /dev/bus/usb/001/002`
