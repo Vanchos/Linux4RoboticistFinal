@@ -6,6 +6,8 @@ echo "Today is " $(date +"%d.%m.%Y")
 #source /home/vancho/Linux4RoboticistFinal/docker_image/ros_workspace/devel/setup.bash
 # запуск roscore
 # roscore &
+# запускаем демона ssh
+/usr/sbin/sshd -D
 # даем права доступа к камере ноутбука
 chmod o+w /dev/bus/usb/001/002 
 # запуск ноды робота

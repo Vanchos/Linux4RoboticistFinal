@@ -43,7 +43,7 @@ COPY ros_workspace/ /home/vancho/Linux4RoboticistFinal/docker_image/ros_workspac
 #CMD ["/usr/sbin/sshd","-D"]
 
 # RQT
-RUN apt-get install -y ros-noetic-rqt ros-noetic-rqt-common-plugins
+# RUN apt-get install -y ros-noetic-rqt ros-noetic-rqt-common-plugins
 
 
 # Drivers
@@ -72,6 +72,11 @@ COPY init.sh /init.sh
 
 # Запускаем программу при старте контейнера
 #CMD ["./init.sh"]
+
+RUN useradd -rm -d /home/ubuntu -s /bin/bash -g root -G sudo -u 1000 sshuser
+RUN echo 'sshuser:12345' | chpasswd
+RUN service ssh start
+EXPOSE 22
 
 CMD ["./bin/bash"]
 

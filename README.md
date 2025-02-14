@@ -35,6 +35,10 @@
 **Сервисы (Services)**
 - Запуск торможения
 
+### Работа ROS-пакета
+
+![](/docs/rosnodes.jpg)
+
 ## Инструкция по установке
 
 ### Docker
@@ -43,8 +47,17 @@
 2. Клонируйте сюда проект с GitHub: https://github.com/Vanchos/Linux4RoboticistFinal
 3. Перейдите в пвпку /home/vancho/Linux4RoboticistFinal/docker_image
 4. Постройте Docker: `$ docker build -t docker-wrh .`
-5. Запустите docker, с пробросом в него камеры с ноутбука: `docker run -it --device=/dev/bus/usb/001/002 docker-wrh`
-6. В терминале запущенного docker запустите скрипт init.sh или последовательно выполните команды:
+5. Запустите docker, с пробросом в него камеры с ноутбука: `docker run -it --device=/dev/bus/usb/001/002 -p 50022:22 docker-wrh`
+6. В терминале запущенного docker (`docker exec -it "CONTAINER ID" /bin/bash`) запустите скрипт init.sh или последовательно выполните команды:
+    - `/usr/sbin/sshd -D`
     - `chmod o+w /dev/bus/usb/001/002`
-    - `roslaunch wrh_robot wrh.launch`
+    - `roslaunch wrh_robot wrh.launch`  
+![](/docs/launch.jpg)
+
+7. Для доступа по SSH 
+    - Определите "CONTAINER ID" контейнера `docker ps` 
+    - Определите IP контейнера `sudo docker inspect -f "{{ .NetworkSettings.IPAddress }}" CONTAINER ID`
+    - Запустите SSH-клиент на хосте: `ssh sshuser@IP`
+    - Введите пароль для sshuser: `12345`  
+![](/docs/ssh.jpg)
 
