@@ -59,6 +59,7 @@ RUN apt-get update && apt-get install -y ros-noetic-lsc-ros-driver
 # chmod o+w /dev/bus/usb/001/002 
 RUN apt-get update && apt-get install -y ros-noetic-libuvc-camera 
 
+# Настраваем пути рабочего пространства ROS
 RUN /bin/bash -c 'source /opt/ros/noetic/setup.bash;\
     echo "source /opt/ros/noetic/setup.bash" >> ~/.bashrc;\
     echo "source /home/vancho/Linux4RoboticistFinal/docker_image/ros_workspace/devel/setup.bash" >> ~/.bashrc'
@@ -73,6 +74,7 @@ COPY init.sh /init.sh
 # Запускаем программу при старте контейнера
 #CMD ["./init.sh"]
 
+# Настраиваем SSH-сервер
 RUN useradd -rm -d /home/ubuntu -s /bin/bash -g root -G sudo -u 1000 sshuser
 RUN echo 'sshuser:12345' | chpasswd
 RUN service ssh start
