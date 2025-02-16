@@ -24,6 +24,7 @@
 ### Архитектура программной части комплекса
 
 #### Узлы (Nodes)
+
 - Драйвер лазерного дальномера (LSC-C Series - ros-noetic-lsc-ros-driver https://wiki.ros.org/lsc_ros_driver | https://github.com/AutonicsLiDAR/lsc_ros_driver/tree/master) - **node name="lsc_laser_publisher"**
 - Драйвер камеры (USB Video Class camera driver - ros-noetic-libuvc-cam https://wiki.ros.org/libuvc_camera) **node name="mycam"**
 - Драйвер привода тормоза (гипотетический)
